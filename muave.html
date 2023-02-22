@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua Vé</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 120px;
+            position: relative;
+        }
+
+        .box1>img {
+            width: 200px;
+        }
+
+        .tiemkiem {
+            position: relative;
+        }
+
+        .deco {
+            width: 400px;
+            height: 40px;
+            border: 2px solid gray;
+            border-radius: 20px;
+            position: absolute;
+            top: 40px;
+            right: 500px;
+            padding-left: 20px;
+        }
+
+        .search {
+            position: absolute;
+            top: 48px;
+            right: 510px;
+        }
+
+        .search>a>img {
+            width: 25px;
+        }
+
+        .dangnhap {
+            position: absolute;
+            top: 45px;
+            right: 100px;
+        }
+
+        .dangnhap>a {
+            text-decoration: none;
+            color: gray;
+            font-size: 20px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .dangnhap>a::before {
+            content: "";
+            top: 0px;
+            left: 0px;
+            width: 0px;
+            height: 100%;
+            transition: 0.3s;
+            z-index: -1;
+            background-color: burlywood;
+            position: absolute;
+            border-radius: 15px;
+
+        }
+
+        .dangnhap>a:hover:before {
+            width: 100%;
+        }
+
+        .dangnhap>a:hover {
+            color: cadetblue;
+        }
+
+        .sign {
+            position: absolute;
+            top: 42px;
+            right: 210px;
+        }
+
+        .sign>img {
+            width: 25px;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .box2>ul>li>a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+            padding-left: 20px;
+            padding-top: 20px;
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .box2>ul>li {
+            float: left;
+            list-style: none;
+            margin-left: 170px;
+        }
+
+        .box2>ul>li>a {
+            position: relative;
+        }
+
+        .box2>ul>li>a::before {
+            content: "";
+            top: 0px;
+            left: 0px;
+            width: 3px;
+            height: 80px;
+            z-index: -1;
+            transition: 0.3s;
+            background-color: black;
+            position: absolute;
+            border-radius: 10px;
+
+        }
+
+        .box2>ul>li>a:hover:before {
+            width: 100%;
+        }
+
+        .box2>ul>li>a:hover {
+            color: aliceblue;
+        }
+
+        .name {
+            position: absolute;
+            top: 358px;
+            left: 10px;
+            width: 35px;
+
+        }
+
+        .text {
+            padding-left: 55px;
+        }
+
+        .text p {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 1350px;
+        }
+
+        .text h1 {
+            text-decoration: underline;
+        }
+
+        .box4 {
+            width: 100%;
+            height: 750px;
+            background-color: black;
+        }
+
+        h2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            margin-left: 55px;
+            margin-top: 50px;
+        }
+
+        .b ul li {
+            margin-left: 90px;
+        }
+
+        .b a {
+            color: white;
+            line-height: 35px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .b a:hover {
+            color: orangered;
+        }
+
+        .b {
+            padding-top: 10px;
+        }
+        .box3 h1{
+            margin-left: 600px;
+            margin-bottom: 50px;
+            color: darkcyan;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .boxcon{
+            margin: 100px;
+        }
+        label{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .kkk{
+            font-size: 15px;
+            color: orangered;
+        }
+        select{
+            height: 50px;
+            border: 3px solid gray;
+            border-radius: 20px;
+            background-color: aquamarine;
+        }
+        .sub{
+            width: 100px;
+            height: 50px;
+            margin-left: 10px;
+            background-color: deeppink;
+            border-radius: 25px;
+            border: 3px solid gray;
+            cursor: pointer;;
+        }
+        .sub:hover{
+            opacity: 0.8;
+        }
+        .sub:active{
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="img/img/logo.png" alt="">
+            <div class="timkiem">
+                <form action="">
+                    <input class="deco" type="text" placeholder="Tìm tên phim, diễn viên...">
+                </form>
+            </div>
+            <div class="search">
+                <a href="#"><img src="img/search.png" alt=""></a>
+            </div>
+            <div class="dangnhap">
+                <a href="sublime.html">Đăng Nhập</a>
+            </div>
+            <div class="sign">
+                <img src="img/signin.png" alt="">
+            </div>
+        </div>
+        <div class="box2">
+            <ul>
+                <li><a href="#">MUA VÉ</a></li>
+                <li><a href="#">PHIM</a></li>
+                <li><a href="#">SỰ KIỆN</a></li>
+                <li><a href="lienhe.html">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="box3">
+            <h1> MUA THEO RẠP</h1>
+            <div class="boxcon">
+                <label for="lang-select">CHỌN RẠP: </label>
+            <select name="lang" id="lang-select">
+                <option class="kkk">Chọn địa điểm bạn muốn xem</option>
+                <option class="kkk">GALAXY NGUYỄN VĂN KHÁ</option>
+                <option class="kkk">GALAXY TRUNG CHÁNH</option>
+                <option class="kkk">GALAXY TRƯỜNG CHINH</option>
+                <option class="kkk">GALAXY QUANG TRUNG</option>
+                <option class="kkk">GALAXY TÂN BÌNH</option>
+                <option class="kkk">GALAXY NGUYỄN DU</option>
+            </select>
+            <label for="lang-select">CHỌN PHIM: </label>
+            <select name="lang" id="lang-select">
+                <option class="kkk">Chọn phim bạn muốn xem</option>
+                <option class="kkk">NHÀ BÀ NỮ</option>
+                <option class="kkk">VONG NHI</option>
+                <option class="kkk">CHỊ CHỊ EM EM 2</option>
+                <option class="kkk">QUANTUMANIA</option>
+                <option class="kkk">TITANIC</option>
+                <option class="kkk">THE POINT MEN</option>
+                <option class="kkk">SOMEDAY OR ONEDAY</option>
+                <option class="kkk">SIÊU LỪA gặp SIÊU LẦY</option>
+            </select>
+            <label for="lang-select">CHỌN GIỜ: </label>
+            <select name="lang" id="lang-select">
+                <option class="kkk">Chọn thời gian bạn muốn xem</option>
+                <option class="kkk">7:00 h</option>
+                <option class="kkk">9:00 h</option>
+                <option class="kkk">11:30 h</option>
+                <option class="kkk">13:00 h</option>
+                <option class="kkk">15:00 h</option>
+                <option class="kkk">17:00 h</option>
+            </select>
+            <input class="sub" type="submit">
+            </div>
+        </div>
+
+        <div class="box4">
+            <div class="b">
+                <h2>GIỚI THIỆU</h2>
+                <ul>
+                    <li><a href="#">&#62; &#62; Về chúng tôi</a></li>
+                    <li><a href="#">&#62; &#62; Thỏa thuận sử dụng</a></li>
+                    <li><a href="#">&#62; &#62; Quy chế hoạt động</a></li>
+                    <li><a href="#">&#62; &#62; Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="b">
+                <h2>GÓC ĐIỆN ẢNH</h2>
+                <ul>
+                    <li><a href="#">&#62; &#62; Thể loại phim</a></li>
+                    <li><a href="#">&#62; &#62; Bình luận phim</a></li>
+                    <li><a href="#">&#62; &#62; BLOG điện ảnh</a></li>
+                    <li><a href="#">&#62; &#62; Phim hay tháng</a></li>
+                </ul>
+            </div>
+            <div class="b">
+                <h2>HỖ TRỢ</h2>
+                <ul>
+                    <li><a href="#">&#62; &#62; Góp ý</a></li>
+                    <li><a href="#">&#62; &#62; SALE & SERVICES</a></li>
+                    <li><a href="#">&#62; &#62; RẠP & GIÁ VÉ</a></li>
+                    <li><a href="#">&#62; &#62; TUYỂN DỤNG</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
